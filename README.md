@@ -1,23 +1,23 @@
-##Reading
+## Reading
 Prior to beginning this tutorial, complete the following readings:
 
 Perry and Miller (C textbook) Chapters 1-5, 7-10 and 14.
-##Accessing the CS Dept server (comp411-1sp20.cs.unc.edu)
+## Accessing the CS Dept server (comp411-1sp20.cs.unc.edu)
 ###Your CS account information
 Your first task is to familiarize yourself with logging in to the virtual machine server for this course/section (comp411-1sp20.cs.unc.edu). Your login name and password on this server are the same as your UNC ONYEN and its password. If you do not know your ONYEN or password, please contact campus IT Services (919-962-HELP or https://help.unc.edu/sp).
 
-###Logging in
-#####NOTE: You must be connected to campus WiFi (or wired network) to be able to log in to our class server. If you are trying to access the server from off-campus, you must first use a VPN connection to campus, and then log in to the server. For more information on VPN, please seek help from IT services, or see here.
+### Logging in
+##### NOTE: You must be connected to campus WiFi (or wired network) to be able to log in to our class server. If you are trying to access the server from off-campus, you must first use a VPN connection to campus, and then log in to the server. For more information on VPN, please seek help from IT services, or see here.
 
 There are different ways to log in to the sever depending on the OS on your personal computer:
 
 Windows: If your computer is running Windows, please use PuTTY (download from here, select the 64-bit "MSI Windows Installer"). Launch PuTTY and enter comp411-1sp20.cs.unc.edu for "Host Name", select "SSH" for connection type, leave the default "Port" value of 22, and click "Open". When prompted with "login as", enter your ONYEN, and then enter your password when prompted. Remember that you will not see your password as you are typing, not even dots, and the cursor will not move either; just enter your password and hit enter.
-###Transferring files
+### Transferring files
 You will also frequently need to transfer files between your personal computer and the server. Again, there are different ways of doing so, depending on the OS on your personal computer:
 
 Windows users should use WinSCP (download for free). Use the same host and user names as for logging in. Drag and drop to copy files between your laptop and the server.
 
-###Exercise 0: Unix Tutorial
+### Exercise 0: Unix Tutorial
 Go through the UNIX tutorial in its entirety, try all of the UNIX commands described, and do all of the embedded tasks. If you do not follow the entire tutorial now, you will have difficulty with UNIX commands throughout the semester.
 
 Specifically, go through all of the following sections of the tutorial:
@@ -29,7 +29,7 @@ Tutorial Three: input/output redirection and pipes
 Tutorial Four: using wildcards in file names
 Tutorial Five: processes and jobs
 Tutorial Six: a few misc useful commands
-####Getting Set Up
+#### Getting Set Up
 Log in to comp411-1sp20.cs.unc.edu.
 
 Next, create a subdirectory (i.e., folder) comp411lab in your home directory by typing the following commands. Note: In these instructions, the % at the beginning of every line is simply the prompt that the command interpreter prints for you. So, in the following, you are only to type whatever is shown after the % prompt.
@@ -106,7 +106,7 @@ Create file intro.in with a value of the radius and run the program so that it t
 
 Carefully note the syntax of the above command to run the program with its standard input redirected from a file, and its standard output redirected to a file. The order of the two files does not matter, so ./intro > intro.out < intro.in would also be okay, but listing the input file first makes the command easier to read. Note however that intro.in > ./intro > intro.out is not a correct way to accomplish the same; the executable file always comes first.
 
-###Exercise 1
+### Exercise 1
 Modify the program so that it prompts you to enter the radius value as input in centimeters using the prompt "Enter radius (in cm):\n", but displays the result in square inches. (One inch is 2.54 cm exactly.) Use pico to edit the file to make this modification, and save the file as ex1.c inside your lab1 subfolder under the comp411lab folder in your home directory.
 
 Compile this program to create an executable file called ex1 by typing
@@ -125,7 +125,7 @@ Circle's area is 3.14 (sq in).
 
 Reminder: We always put a "./" before the name of the executable when executing a program in your current working directory, hence ./ex1 above.
 
-###Exercise 2
+### Exercise 2
 Copy the file ex1.c to ex2.c (so you do not accidentally edit ex1.c any further). Modify the program in ex2.c to also compute and display the circumference. Compile it to an executable called ex2, and run it. Here is an example execution scenario:
 
 `% ./ex2`
@@ -138,7 +138,7 @@ Circle's area is 3.14 (sq in).
 
 Its circumference is 6.28 (in).
 
-###Exercise 3
+### Exercise 3
 Copy the file ex2.c to ex3.c. Modify the program in ex3.c to make it work on multiple inputs. In particular, it should repeatedly ask for a radius value (in centimeters), and print the corresponding area (in square inches) and circumference (in inches), until the user enters the value 0 as radius. At that point, the program should print the area and circumference (both 0), and then terminate.
 
 Compile this program to make an executable called ex3, and run it, feeding it several radius values from the keyboard, and verifying that the values it displays are correct. A single run of the program should be able to compute as many of these calculations as you want, until you enter 0.
